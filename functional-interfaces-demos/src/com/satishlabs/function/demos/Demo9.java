@@ -17,5 +17,12 @@ public class Demo9 {
 		System.out.println(out3);
 		
 		
+		Function<String, String> func4 = (input) -> input;
+		String out4 = func4.apply("Hello Guys!");
+		System.out.println(out4);
+		
+		Function<String, String> fun5 = Function.identity();
+		String out5 = fun5.apply("Hello Satish !!");
+		System.out.println(out5);
 	}
 }
