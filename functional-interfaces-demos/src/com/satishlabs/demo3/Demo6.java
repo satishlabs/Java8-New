@@ -21,5 +21,15 @@ public class Demo6 {
 		
 		myvalue =  predicate2.test(57);
 		System.out.println(myvalue);
+		
+		System.out.println();
+		System.out.println("=====================================");
+		
+		Predicate<Integer> predicate3 = (num)->num%2==0;
+		Predicate<Integer> predicate4 = (num)->num%2==1;
+		boolean mybool = predicate3.test(28);
+		System.out.println(mybool);
+		mybool = predicate3.negate().test(28);
+		System.out.println(mybool);
 	}
 }
