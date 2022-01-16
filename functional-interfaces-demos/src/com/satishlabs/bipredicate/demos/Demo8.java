@@ -13,5 +13,8 @@ public class Demo8 {
 		BiPredicate<Integer,Integer> predicate2 = (num1,num2)->num1<num2;
 		mybool = predicate2.test(13, 21);
 		System.out.println(mybool);
+		
+		
+		
 	}
 }
