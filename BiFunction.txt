@@ -1,0 +1,5 @@
+
+ interface BiFunction<T, U, R> {
+   abstract R apply(T, U);
+   <V> BiFunction<T, U, V> andThen(Function<? super R, ? extends V>);
+}

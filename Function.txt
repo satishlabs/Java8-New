@@ -1,0 +1,7 @@
+
+ interface Function<T, R> {
+   abstract R apply(T); //SAM
+   <V> Function<V, R> compose(Function<? super V, ? extends T>);
+   <V> Function<T, V> andThen(Function<? super R, ? extends V>);
+   static <T> Function<T, T> identity();
+}

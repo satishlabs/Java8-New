@@ -1,0 +1,7 @@
+
+ interface BiPredicate<T, U> {
+   abstract boolean test(T, U);
+   BiPredicate<T, U> and(BiPredicate<? super T, ? super U>);
+   BiPredicate<T, U> negate();
+   BiPredicate<T, U> or(BiPredicate<? super T, ? super U>);
+}
