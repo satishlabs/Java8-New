@@ -29,9 +29,5 @@ public class Demo10 {
 		//fun2.apply(20) => 3*20 =>60
 		System.out.println(res2);//60
 		
-		
-		//use cases:
-		//Task1 : Convert String to number(fun1)
-		//Task2 : add 10 to the number(fun2)
 	}
 }
