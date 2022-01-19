@@ -10,10 +10,14 @@ public class Demo15 {
 		
 		Consumer<String> consumer1 = (input)->System.out.println(input.toUpperCase());
 		consumer1.accept("Hello Satish");
+		consumer1.accept("Test1");
+		consumer1.accept("Consumer Test");
 		
 		
 		//Bi-Consumer
 		BiConsumer<String, String> consumer2 = (input1,input2)->System.out.println(input1.toUpperCase()+input2);
 		consumer2.accept("Hello : ", "Satish Prasad");
+		consumer2.accept("BiConsumer : ", "Test");
+		
 	}
 }
