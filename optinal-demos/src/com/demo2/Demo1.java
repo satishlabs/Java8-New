@@ -17,7 +17,7 @@ public class Demo1 {
 		if(myopts.isPresent()) {
 			System.out.println("5. "+myopts.get());
 		}else {
-			System.out.println("No value found");
+			System.out.println("6. No value found");
 		}
 	}
 }
