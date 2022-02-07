@@ -18,7 +18,23 @@ public class Demo1 {
 		System.out.println("Name : "+mystudent.map(n->n.getStudentName()));
 		System.out.println("Email : "+mystudent.map(s -> s.getStudentEmail()));
 		System.out.println("Mobile : "+mystudent.map(p->p.getStudentPhone()));
-
+		
+		System.out.println("------------------------------------");
+		Optional<Course> mycourse = mystudent.flatMap(mystu->mystu.getCourse());
+		Optional<Trainer> mytrainer = mycourse.flatMap(mycou->mycou.getTrainer());
+		
+		Optional<String> nameOpts = mytrainer.map(mytra->mytra.getTrainerName());
+		String name = nameOpts.orElse("No Name is given");
+		System.out.println(name);
+		
+		Optional<String> emailOpts = mytrainer.map(mytra->mytra.getTrainerEmail());
+		String email = emailOpts.orElse("No Email is given");
+		System.out.println(email);
+		
+		Optional<String> phoneOpts = mytrainer.map(mytra->mytra.getTrainerPhone());
+		String phone = phoneOpts.orElse("No Phone is given");
+		System.out.println(phone);
+		
 		
 	}
 }
