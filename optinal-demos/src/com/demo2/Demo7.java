@@ -1,7 +1,6 @@
 package com.demo2;
 
 import java.util.Optional;
-import java.util.function.Consumer;
 
 public class Demo7 {
 	public static void main(String[] args) {
