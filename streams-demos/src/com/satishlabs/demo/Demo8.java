@@ -12,5 +12,14 @@ public class Demo8 {
 			.map(num -> num*num)
 			.sorted()
 			.forEach(System.out::println);
+		
+		System.out.println("--------------------------------");
+		myList.stream()
+			.limit(15)
+			.distinct()
+			.filter(num -> num%2!=0)
+			.map(num -> num*num)
+			.sorted()
+			.forEach(System.out::println);
 	}
 }
