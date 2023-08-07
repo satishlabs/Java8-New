@@ -1,0 +1,54 @@
+
+public interface Stream<T> extends BaseStream<T, Stream<T>> {
+
+Stream<T> filter(Predicate<? super T>);
+<R> Stream<R> map(Function<? super T, ? extends R>);
+<R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>>);
+
+void forEach(Consumer<? super T>);
+void forEachOrdered(Consumer<? super T>);
+
+Stream<T> limit(long);
+Stream<T> skip(long);
+
+Stream<T> distinct();
+Stream<T> sorted();
+Stream<T> sorted(java.util.Comparator<? super T>);
+Stream<T> peek(Consumer<? super T>);
+
+
+
+
+T reduce(T,BinaryOperator<T>);
+<U> U reduce(U, BiFunction<U, ? super T, U>, BinaryOperator<U>);
+<R> R collect(Supplier<R>, BiConsumer<R, ? super T>, BiConsumer<R, R>);
+<R, A> R collect(Collector<? super T, A, R>);
+  java.util.List<T> toList();
+java.util.Optional<T> min(java.util.Comparator<? super T>);
+java.util.Optional<T> max(java.util.Comparator<? super T>);
+long count();
+boolean anyMatch(Predicate<? super T>);
+boolean allMatch(Predicate<? super T>);
+boolean noneMatch(Predicate<? super T>);
+java.util.Optional<T> findFirst();
+java.util.Optional<T> findAny();
+  Stream$Builder<T> builder();
+  Stream<T> empty();
+  Stream<T> of(T);
+  Stream<T> ofNullable(T);
+  Stream<T> of(T...);
+  Stream<T> iterate(T, UnaryOperator<T>);
+  Stream<T> iterate(T, Predicate<? super T>, UnaryOperator<T>);
+  Stream<T> generate(Supplier<? extends T>);
+  Stream<T> concat(Stream<? extends T>, Stream<? extends T>);
+  
+IntStream flatMapToInt(Function<? super T, ? extends IntStream>);
+LongStream flatMapToLong(Function<? super T, ? extends LongStream>);
+DoubleStream flatMapToDouble(Function<? super T, ? extends DoubleStream>);  
+
+  
+IntStream mapToInt(ToIntFunction<? super T>);
+LongStream mapToLong(ToLongFunction<? super T>);
+DoubleStream mapToDouble(ToDoubleFunction<? super T>);
+
+}
