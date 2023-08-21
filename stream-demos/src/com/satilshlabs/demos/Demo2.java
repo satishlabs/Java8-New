@@ -23,6 +23,5 @@ public class Demo2 {
 		Stream<Integer> mystream3 = numsList.stream(); // 1
 		mystream3.forEach(System.out::println);
 		
-		
 	}
 }
